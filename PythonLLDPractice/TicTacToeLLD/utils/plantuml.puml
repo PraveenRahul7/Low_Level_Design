@@ -1,0 +1,68 @@
+@startuml
+package "game" {
+
+    class TicTacToeGame {
+        - board: Board
+        - players: List<Player>
+        - current_turn: int
+        --
+        + start_game(): void
+        + switch_turn(): void
+    }
+
+    class Board {
+        - size: int
+        - grid: List<List<PlayingPiece>>
+        --
+        + add_piece(row: int, col: int, piece: PlayingPiece): bool
+        + is_valid_move(row: int, col: int): bool
+        + print_board(): void
+        + is_winner(piece: PlayingPiece): bool
+        + is_full(): bool
+    }
+
+    class Player {
+        - name: str
+        - piece: PlayingPiece
+        --
+        + get_playing_piece(): PlayingPiece
+        + get_name(): str
+    }
+
+    class PlayingPiece {
+        - piece_type: PieceType
+        --
+        + get_piece_type(): PieceType
+    }
+
+    class PlayingPieceX {
+        + get_piece_type(): PieceType
+    }
+
+    class PlayingPieceO {
+        + get_piece_type(): PieceType
+    }
+
+    class PieceType {
+    }
+
+    TicTacToeGame "1" *-- "1" Board
+    TicTacToeGame "2" *-- "2" Player
+    Board "1" *-- "n" PlayingPiece
+    Player "1" *-- "1" PlayingPiece
+    PlayingPiece <|-- PlayingPieceX
+    PlayingPiece <|-- PlayingPieceO
+    PlayingPiece "1" *-- "1" PieceType
+}
+
+package "utils" {
+    class Logger {
+        + log_info(message: str)
+        + log_debug(message: str)
+        + log_error(message: str)
+    }
+}
+
+TicTacToeGame ..> Logger : <<uses>>
+Board ..> Logger : <<uses>>
+@enduml

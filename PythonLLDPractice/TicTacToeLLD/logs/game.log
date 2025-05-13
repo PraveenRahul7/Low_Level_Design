@@ -1,0 +1,18 @@
+2025-05-13 12:09:32,349 - INFO - Board initialized with size 3x3
+2025-05-13 12:09:32,350 - INFO - Game initialized with Player 1 (X) and Player 2 (O)
+2025-05-13 12:09:32,350 - INFO - Game Started
+2025-05-13 12:09:47,003 - INFO - Piece X added at (0, 0)
+2025-05-13 12:09:47,003 - INFO - Turn switched to Player 2
+2025-05-13 12:09:57,727 - INFO - Piece O added at (1, 0)
+2025-05-13 12:09:57,728 - INFO - Turn switched to Player 1
+2025-05-13 12:10:33,713 - INFO - Piece X added at (2, 0)
+2025-05-13 12:10:33,714 - INFO - Turn switched to Player 2
+2025-05-13 12:10:44,461 - INFO - Piece O added at (1, 2)
+2025-05-13 12:10:44,461 - INFO - Turn switched to Player 1
+2025-05-13 12:10:57,417 - INFO - Piece X added at (1, 1)
+2025-05-13 12:10:57,418 - INFO - Turn switched to Player 2
+2025-05-13 12:11:06,960 - ERROR - Invalid Move at (1, 1)
+2025-05-13 12:11:13,282 - INFO - Piece O added at (2, 1)
+2025-05-13 12:11:13,283 - INFO - Turn switched to Player 1
+2025-05-13 12:11:19,475 - INFO - Piece X added at (2, 2)
+2025-05-13 12:11:19,476 - INFO - Player 1 wins the game!
